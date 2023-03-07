@@ -1,15 +1,22 @@
-const InputBox = ({ input, setInput }) => {
+import colorNames from "colornames";
+
+const InputBox = ({ colorValue, setColorValue, setHexValue }) => {
   return (
-    <div className="input-box">
+    <form className="input-box" onSubmit={(e) => e.preventDefault()}>
+      <label>Add Color Name:</label>
+      <br />
       <input
+        autoFocus
         type="text"
         placeholder="Add Color Name"
         required
-        value={input}
-        setInput={setInput}
-        onChange={(e) => setInput(e.target.value)}
+        value={colorValue}
+        onChange={(e) => {
+          setColorValue(e.target.value);
+          setHexValue(colorNames(e.target.value));
+        }}
       />
-    </div>
+    </form>
   );
 };
 

@@ -73,19 +73,24 @@ button:focus-visible {
   display: grid;
   place-content: center;
   font-size: 2em;
-  height: 40vh;
-  width: 20vw;
+  height: 10em;
+  width: 10em;
   border: white 2px solid;
   box-shadow: 3px 3px 4px silver;
   border-radius: 5px;
 }
 
 .input-box input {
-  padding: 6px;
-  margin-top: 20px;
+  padding: 0.2em;
   font-size: 1.8em;
-  width: 19.6vw;
+  width: 11em;
   border: white 1px solid;
   box-shadow: 1px 1px 4px silver;
   border-radius: 5px;
+  outline: none;
+}
+
+label {
+  position: absolute;
+  left: -99999px;
 }
